@@ -37,5 +37,26 @@ namespace MisClases
             }
             return Lista_preg;
         }
+        public string ObtenerTextoPregunta(int preguntaId)
+        {
+            string texto = "";
+            using (SqlConnection conexion = ObtenerConexion())
+            {
+                conexion.Open();
+                string consulta = "SELECT Pregunta FROM Pregunta WHERE Pregunta_ID=@Pregunta_ID";
+
+                using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                {
+                    comando.Parameters.AddWithValue("@Pregunta_ID", preguntaId);
+                    object resultado = comando.ExecuteScalar();
+                    if (resultado != null)
+                    {
+                        texto = resultado.ToString();
+                    }
+                }
+            }
+            return texto;
+        }
     }
+
 }

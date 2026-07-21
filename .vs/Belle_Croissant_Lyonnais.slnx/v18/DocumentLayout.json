@@ -3,28 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\belle_croissant_lyonnais\\registro_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|solutionrelative:belle_croissant_lyonnais\\registro_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\belle_croissant_lyonnais\\editarperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|solutionrelative:belle_croissant_lyonnais\\editarperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\belle_croissant_lyonnais\\registro_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|solutionrelative:belle_croissant_lyonnais\\registro_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\belle_croissant_lyonnais\\editarperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|solutionrelative:belle_croissant_lyonnais\\editarperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\belle_croissant_lyonnais\\inicio_de_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|solutionrelative:belle_croissant_lyonnais\\inicio_de_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\belle_croissant_lyonnais\\perfil_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|solutionrelative:belle_croissant_lyonnais\\perfil_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{805476AF-3668-A238-61B2-BE0DFE89B3F3}|MisClases\\MisClases.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\misclases\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{805476AF-3668-A238-61B2-BE0DFE89B3F3}|MisClases\\MisClases.csproj|solutionrelative:misclases\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\belle_croissant_lyonnais\\inicio_de_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\belle_croissant_lyonnais\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|solutionrelative:belle_croissant_lyonnais\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\belle_croissant_lyonnais\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|solutionrelative:belle_croissant_lyonnais\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\belle_croissant_lyonnais\\inicio_de_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|solutionrelative:belle_croissant_lyonnais\\inicio_de_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\belle_croissant_lyonnais\\inicio_de_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|solutionrelative:belle_croissant_lyonnais\\inicio_de_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{805476AF-3668-A238-61B2-BE0DFE89B3F3}|MisClases\\MisClases.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\misclases\\preguntas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{805476AF-3668-A238-61B2-BE0DFE89B3F3}|MisClases\\MisClases.csproj|solutionrelative:misclases\\preguntas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\belle_croissant_lyonnais\\perfil_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|solutionrelative:belle_croissant_lyonnais\\perfil_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\belle_croissant_lyonnais\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F6157E2-9298-6DC7-93AF-DDB516FAFA1A}|Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj|solutionrelative:belle_croissant_lyonnais\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{805476AF-3668-A238-61B2-BE0DFE89B3F3}|MisClases\\MisClases.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\misclases\\preguntasdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{805476AF-3668-A238-61B2-BE0DFE89B3F3}|MisClases\\MisClases.csproj|solutionrelative:misclases\\preguntasdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{805476AF-3668-A238-61B2-BE0DFE89B3F3}|MisClases\\MisClases.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\misclases\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{805476AF-3668-A238-61B2-BE0DFE89B3F3}|MisClases\\MisClases.csproj|solutionrelative:misclases\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{805476AF-3668-A238-61B2-BE0DFE89B3F3}|MisClases\\MisClases.csproj|c:\\users\\usuario\\downloads\\csharp\\belle_croissant_lyonnais\\misclases\\direcciondao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{805476AF-3668-A238-61B2-BE0DFE89B3F3}|MisClases\\MisClases.csproj|solutionrelative:misclases\\direcciondao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,15 +74,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Preguntas.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\Preguntas.cs",
-              "RelativeDocumentMoniker": "MisClases\\Preguntas.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\Preguntas.cs",
-              "RelativeToolTip": "MisClases\\Preguntas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Belle_Croissant_Lyonnais\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Form1.Designer.cs",
+              "RelativeToolTip": "Belle_Croissant_Lyonnais\\Form1.Designer.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAjwM0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-14T00:29:32.135Z"
+              "WhenOpened": "2026-07-21T05:41:08.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PreguntasDAO.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\PreguntasDAO.cs",
+              "RelativeDocumentMoniker": "MisClases\\PreguntasDAO.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\PreguntasDAO.cs",
+              "RelativeToolTip": "MisClases\\PreguntasDAO.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAwCcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T05:25:21.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Form1.cs",
+              "RelativeDocumentMoniker": "Belle_Croissant_Lyonnais\\Form1.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Form1.cs",
+              "RelativeToolTip": "Belle_Croissant_Lyonnais\\Form1.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAswFAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T05:21:12.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Form1.cs",
+              "RelativeDocumentMoniker": "Belle_Croissant_Lyonnais\\Form1.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Belle_Croissant_Lyonnais\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T05:05:22.27Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Inicio_de_Sesion.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs",
+              "RelativeDocumentMoniker": "Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs",
+              "RelativeToolTip": "Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAtwC4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T05:05:04.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Inicio_de_Sesion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs",
+              "RelativeDocumentMoniker": "Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T05:04:58.826Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditarPerfil.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\EditarPerfil.cs",
+              "RelativeDocumentMoniker": "Belle_Croissant_Lyonnais\\EditarPerfil.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\EditarPerfil.cs",
+              "RelativeToolTip": "Belle_Croissant_Lyonnais\\EditarPerfil.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAewLsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-20T21:01:55.727Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -64,58 +169,73 @@
               "RelativeDocumentMoniker": "MisClases\\UsuarioDAO.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\UsuarioDAO.cs",
               "RelativeToolTip": "MisClases\\UsuarioDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAUwCUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T20:56:26.363Z"
+              "WhenOpened": "2026-07-21T01:42:25.591Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Registro_Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Registro_Usuario.cs",
-              "RelativeDocumentMoniker": "Belle_Croissant_Lyonnais\\Registro_Usuario.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Registro_Usuario.cs",
-              "RelativeToolTip": "Belle_Croissant_Lyonnais\\Registro_Usuario.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAIwGQAAAA3AAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Perfil_Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Perfil_Usuario.cs",
+              "RelativeDocumentMoniker": "Belle_Croissant_Lyonnais\\Perfil_Usuario.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Perfil_Usuario.cs",
+              "RelativeToolTip": "Belle_Croissant_Lyonnais\\Perfil_Usuario.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAjwCoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T20:25:34.323Z",
+              "WhenOpened": "2026-07-21T01:43:08.981Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Inicio_de_Sesion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs",
-              "RelativeDocumentMoniker": "Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs",
-              "RelativeToolTip": "Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABWAAAAAAAAAA==",
+              "Title": "Perfil_Usuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Perfil_Usuario.cs",
+              "RelativeDocumentMoniker": "Belle_Croissant_Lyonnais\\Perfil_Usuario.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Perfil_Usuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Belle_Croissant_Lyonnais\\Perfil_Usuario.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T22:26:18.003Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Registro_Usuario.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Registro_Usuario.cs",
-              "RelativeDocumentMoniker": "Belle_Croissant_Lyonnais\\Registro_Usuario.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Registro_Usuario.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Belle_Croissant_Lyonnais\\Registro_Usuario.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T17:15:02.046Z",
+              "WhenOpened": "2026-07-21T01:43:04.533Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Inicio_de_Sesion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs",
-              "RelativeDocumentMoniker": "Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Belle_Croissant_Lyonnais\\Inicio_de_Sesion.cs [Dise\u00F1o]",
+              "DocumentIndex": 1,
+              "Title": "EditarPerfil.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\EditarPerfil.cs",
+              "RelativeDocumentMoniker": "Belle_Croissant_Lyonnais\\EditarPerfil.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\EditarPerfil.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Belle_Croissant_Lyonnais\\EditarPerfil.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T19:45:44.335Z"
+              "WhenOpened": "2026-07-19T15:41:30.339Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\Usuario.cs",
+              "RelativeDocumentMoniker": "MisClases\\Usuario.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\Usuario.cs",
+              "RelativeToolTip": "MisClases\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T01:43:15.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DireccionDAO.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\DireccionDAO.cs",
+              "RelativeDocumentMoniker": "MisClases\\DireccionDAO.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\DireccionDAO.cs",
+              "RelativeToolTip": "MisClases\\DireccionDAO.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAYwF0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T01:52:17.212Z",
+              "EditorCaption": ""
             }
           ]
         }

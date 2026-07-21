@@ -108,6 +108,7 @@
             link_recuperacion.TabIndex = 7;
             link_recuperacion.TabStop = true;
             link_recuperacion.Text = "¿Olvidaste tu Contraseña?";
+            link_recuperacion.LinkClicked += link_recuperacion_LinkClicked;
             // 
             // txtbox_contraseña
             // 

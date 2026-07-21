@@ -15,9 +15,12 @@ namespace Belle_Croissant_Lyonnais
         {
             Usuario usuario = usuarioDAO.ObtenerUsuarioPorEmail(txt_correo.Text);
 
-            if(usuario != null && BCrypt.Net.BCrypt.Verify(txtbox_contraseña.Text, usuario.Contraseña))
+            if (usuario != null && BCrypt.Net.BCrypt.Verify(txtbox_contraseña.Text, usuario.Contraseña))
             {
                 MessageBox.Show("Bienvenido " + usuario.Nombre);
+                Perfil_Usuario perfil = new Perfil_Usuario(usuario);
+                perfil.Show();
+                this.Hide();
             }
             else
             {
@@ -35,6 +38,13 @@ namespace Belle_Croissant_Lyonnais
         private void txtbox_contraseña_TextChanged(object sender, EventArgs e)
         {
             txtbox_contraseña.PasswordChar = '*';
+        }
+
+        private void link_recuperacion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+            this.Hide();
         }
     }
 }

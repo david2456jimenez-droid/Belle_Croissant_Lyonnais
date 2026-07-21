@@ -88,6 +88,7 @@ namespace Belle_Croissant_Lyonnais
                         usuario.Respuesta_Seguridad = respuesta_cript;
                         usuario.Suscripcion = check_subsc.Checked;
 
+
                         bool registro = usuarioDAO.registrar_usuario(usuario);//para saber si el usuario fue agregado correctamente
 
                         if (registro)
