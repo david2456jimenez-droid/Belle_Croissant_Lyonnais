@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "63VuU2RjqQw=",
+  "dgSpecHash": "a9G9htuGKm8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj",
+  "projectFilePath": "C:\\Users\\USUARIO\\Downloads\\CSHARP\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.13\\microsoft.bcl.cryptography.9.0.13.nupkg.sha512",

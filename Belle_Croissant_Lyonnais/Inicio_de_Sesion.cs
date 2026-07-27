@@ -46,10 +46,5 @@ namespace Belle_Croissant_Lyonnais
             form.Show();
             this.Hide();
         }
-
-        private void btn_cerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

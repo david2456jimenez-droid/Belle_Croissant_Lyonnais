@@ -40,7 +40,6 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            btn_cerrar = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -48,7 +47,6 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ButtonHighlight;
-            panel1.Controls.Add(btn_cerrar);
             panel1.Controls.Add(link_registrarse);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(btn_ingresar);
@@ -115,6 +113,7 @@
             // txtbox_contraseña
             // 
             txtbox_contraseña.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtbox_contraseña.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtbox_contraseña.Location = new Point(17, 264);
             txtbox_contraseña.Multiline = true;
             txtbox_contraseña.Name = "txtbox_contraseña";
@@ -135,6 +134,7 @@
             // txt_correo
             // 
             txt_correo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txt_correo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txt_correo.Location = new Point(17, 172);
             txt_correo.Multiline = true;
             txt_correo.Name = "txt_correo";
@@ -171,16 +171,6 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // btn_cerrar
-            // 
-            btn_cerrar.Location = new Point(337, 2);
-            btn_cerrar.Name = "btn_cerrar";
-            btn_cerrar.Size = new Size(60, 21);
-            btn_cerrar.TabIndex = 11;
-            btn_cerrar.Text = "Cerrar";
-            btn_cerrar.UseVisualStyleBackColor = true;
-            btn_cerrar.Click += btn_cerrar_Click;
-            // 
             // Inicio_de_Sesion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -209,6 +199,5 @@
         private LinkLabel link_registrarse;
         private Label label4;
         private Button btn_ingresar;
-        private Button btn_cerrar;
     }
 }

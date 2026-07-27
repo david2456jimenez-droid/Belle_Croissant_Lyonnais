@@ -55,14 +55,6 @@ namespace Belle_Croissant_Lyonnais
                 radiobtn_Recoger.Checked = true;
             }
 
-            // Para "Eliminar dirección" -> todas las direcciones
-            List<Direccion> todasLasDirecciones = direccionDAO.ObtenerDireccionesPorUsuario(usuario.Usuario_ID);
-            combox_elimidirec.DataSource = null;
-            combox_elimidirec.DataSource = todasLasDirecciones;
-            combox_elimidirec.DisplayMember = "Direccion_";
-            combox_elimidirec.ValueMember = "Direccion_ID";
-            combox_elimidirec.SelectedIndex = -1;
-
             // Para "Agregar Favoritos" -> solo las que NO son favoritas
             List<Direccion> noFavoritas = direccionDAO.ObtenerDireccionesPorUsuario(usuario.Usuario_ID, false);
             combox_FavoritoDirec.DataSource = null;
@@ -89,20 +81,6 @@ namespace Belle_Croissant_Lyonnais
                 usuario.Telefono = txt_telefono.Text;
             }
         }
-
-        private void btn_cancelElim_Click(object sender, EventArgs e)
-        {
-            combox_elimidirec.SelectedIndex = -1;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            txtbox_Lugar.Text = "";
-            txt_direccion.Text = "";
-            txt_direccion.Enabled = false;
-            checkpreferencia.Enabled = false;
-        }
-
         private void btn_cancelAgreg_Click(object sender, EventArgs e)
         {
             combox_FavoritoDirec.SelectedIndex = -1;
@@ -177,14 +155,6 @@ namespace Belle_Croissant_Lyonnais
                 DireccionDAO direccionDAO = new DireccionDAO();
                 direccionDAO.AgregarDireccion(direccion, usuario.Usuario_ID);
             }
-            if (combox_elimidirec.SelectedItem == null)
-            {
-
-            }
-            else
-            {
-                direccion.eliminardireccion = combox_elimidirec.SelectedItem.ToString();
-            }
             if (combox_FavoritoDirec.SelectedItem == null)
             {
             }
@@ -195,11 +165,11 @@ namespace Belle_Croissant_Lyonnais
             }
             if (combox_eliminFavorit.SelectedItem == null)
             {
-
             }
             else
             {
-                direccion.eliminar_fav = combox_eliminFavorit.SelectedItem.ToString();
+                direccion.eliminar_fav = combox_eliminFavorit.SelectedValue.ToString();
+                direccionDAO.EliminarFavorito(direccion);
             }
 
             //---------------------------------------------------------------------------------------------//

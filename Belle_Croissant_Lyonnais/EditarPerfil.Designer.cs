@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarPerfil));
-            label8 = new Label();
             label6 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -54,7 +53,6 @@
             label5 = new Label();
             panel5 = new Panel();
             label7 = new Label();
-            combox_elimidirec = new ComboBox();
             label9 = new Label();
             combox_FavoritoDirec = new ComboBox();
             label10 = new Label();
@@ -65,7 +63,6 @@
             txt_correo = new TextBox();
             txt_apellido = new TextBox();
             txt_nombre = new TextBox();
-            btn_cancelElim = new Button();
             btn_cancelAgreg = new Button();
             btn_cancelElimFav = new Button();
             button1 = new Button();
@@ -84,16 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(683, 492);
-            label8.Name = "label8";
-            label8.Size = new Size(139, 21);
-            label8.TabIndex = 24;
-            label8.Text = "Eliminar direccion";
             // 
             // label6
             // 
@@ -359,20 +346,11 @@
             label7.TabIndex = 38;
             label7.Text = "Direccion";
             // 
-            // combox_elimidirec
-            // 
-            combox_elimidirec.DropDownStyle = ComboBoxStyle.DropDownList;
-            combox_elimidirec.FormattingEnabled = true;
-            combox_elimidirec.Location = new Point(849, 490);
-            combox_elimidirec.Name = "combox_elimidirec";
-            combox_elimidirec.Size = new Size(154, 23);
-            combox_elimidirec.TabIndex = 39;
-            // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(683, 547);
+            label9.Location = new Point(683, 496);
             label9.Name = "label9";
             label9.Size = new Size(140, 21);
             label9.TabIndex = 40;
@@ -382,7 +360,7 @@
             // 
             combox_FavoritoDirec.DropDownStyle = ComboBoxStyle.DropDownList;
             combox_FavoritoDirec.FormattingEnabled = true;
-            combox_FavoritoDirec.Location = new Point(849, 545);
+            combox_FavoritoDirec.Location = new Point(849, 494);
             combox_FavoritoDirec.Name = "combox_FavoritoDirec";
             combox_FavoritoDirec.Size = new Size(154, 23);
             combox_FavoritoDirec.TabIndex = 41;
@@ -391,7 +369,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(683, 598);
+            label10.Location = new Point(683, 547);
             label10.Name = "label10";
             label10.Size = new Size(160, 21);
             label10.TabIndex = 42;
@@ -401,7 +379,7 @@
             // 
             combox_eliminFavorit.DropDownStyle = ComboBoxStyle.DropDownList;
             combox_eliminFavorit.FormattingEnabled = true;
-            combox_eliminFavorit.Location = new Point(849, 600);
+            combox_eliminFavorit.Location = new Point(849, 549);
             combox_eliminFavorit.Name = "combox_eliminFavorit";
             combox_eliminFavorit.Size = new Size(154, 23);
             combox_eliminFavorit.TabIndex = 43;
@@ -434,6 +412,7 @@
             // txt_telefono
             // 
             txt_telefono.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txt_telefono.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txt_telefono.Location = new Point(694, 335);
             txt_telefono.Multiline = true;
             txt_telefono.Name = "txt_telefono";
@@ -443,6 +422,7 @@
             // txt_correo
             // 
             txt_correo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txt_correo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txt_correo.Location = new Point(317, 335);
             txt_correo.Multiline = true;
             txt_correo.Name = "txt_correo";
@@ -452,6 +432,7 @@
             // txt_apellido
             // 
             txt_apellido.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txt_apellido.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txt_apellido.Location = new Point(694, 260);
             txt_apellido.Multiline = true;
             txt_apellido.Name = "txt_apellido";
@@ -461,25 +442,12 @@
             // txt_nombre
             // 
             txt_nombre.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txt_nombre.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txt_nombre.Location = new Point(317, 260);
             txt_nombre.Multiline = true;
             txt_nombre.Name = "txt_nombre";
             txt_nombre.Size = new Size(329, 34);
             txt_nombre.TabIndex = 47;
-            // 
-            // btn_cancelElim
-            // 
-            btn_cancelElim.BackColor = Color.Crimson;
-            btn_cancelElim.FlatStyle = FlatStyle.Popup;
-            btn_cancelElim.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
-            btn_cancelElim.ForeColor = SystemColors.ButtonHighlight;
-            btn_cancelElim.Location = new Point(1009, 488);
-            btn_cancelElim.Name = "btn_cancelElim";
-            btn_cancelElim.Size = new Size(53, 29);
-            btn_cancelElim.TabIndex = 52;
-            btn_cancelElim.Text = "Cancelar";
-            btn_cancelElim.UseVisualStyleBackColor = false;
-            btn_cancelElim.Click += btn_cancelElim_Click;
             // 
             // btn_cancelAgreg
             // 
@@ -487,7 +455,7 @@
             btn_cancelAgreg.FlatStyle = FlatStyle.Popup;
             btn_cancelAgreg.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btn_cancelAgreg.ForeColor = SystemColors.ButtonHighlight;
-            btn_cancelAgreg.Location = new Point(1009, 541);
+            btn_cancelAgreg.Location = new Point(1009, 490);
             btn_cancelAgreg.Name = "btn_cancelAgreg";
             btn_cancelAgreg.Size = new Size(53, 29);
             btn_cancelAgreg.TabIndex = 53;
@@ -501,7 +469,7 @@
             btn_cancelElimFav.FlatStyle = FlatStyle.Popup;
             btn_cancelElimFav.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             btn_cancelElimFav.ForeColor = SystemColors.ButtonHighlight;
-            btn_cancelElimFav.Location = new Point(1009, 594);
+            btn_cancelElimFav.Location = new Point(1009, 543);
             btn_cancelElimFav.Name = "btn_cancelElimFav";
             btn_cancelElimFav.Size = new Size(53, 29);
             btn_cancelElimFav.TabIndex = 54;
@@ -521,7 +489,6 @@
             button1.TabIndex = 55;
             button1.Text = "Cancelar";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // checkpreferencia
             // 
@@ -601,7 +568,6 @@
             Controls.Add(button1);
             Controls.Add(btn_cancelElimFav);
             Controls.Add(btn_cancelAgreg);
-            Controls.Add(btn_cancelElim);
             Controls.Add(txt_direccion);
             Controls.Add(txt_telefono);
             Controls.Add(txt_correo);
@@ -612,12 +578,10 @@
             Controls.Add(label10);
             Controls.Add(combox_FavoritoDirec);
             Controls.Add(label9);
-            Controls.Add(combox_elimidirec);
             Controls.Add(label7);
             Controls.Add(panel5);
             Controls.Add(label5);
             Controls.Add(label1);
-            Controls.Add(label8);
             Controls.Add(label6);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -644,7 +608,6 @@
         #endregion
 
         private Label label10;
-        private Label label8;
         private Label label6;
         private Label label4;
         private Label label3;
@@ -668,7 +631,6 @@
         private Label label5;
         private Panel panel5;
         private Label label7;
-        private ComboBox combox_elimidirec;
         private Label label9;
         private ComboBox combox_FavoritoDirec;
         private ComboBox combox_eliminFavorit;
@@ -678,7 +640,6 @@
         private TextBox txt_correo;
         private TextBox txt_apellido;
         private TextBox txt_nombre;
-        private Button btn_cancelElim;
         private Button btn_cancelAgreg;
         private Button btn_cancelElimFav;
         private Button button1;

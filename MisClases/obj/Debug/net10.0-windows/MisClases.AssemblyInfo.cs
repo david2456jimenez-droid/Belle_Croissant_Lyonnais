@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MisClases")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4eab52f3c8e163c1ce81839131d8ad5fb6cc737")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d59f4f2ee29b06d68bc0ba751f5d9a1a8b5308a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MisClases")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MisClases")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

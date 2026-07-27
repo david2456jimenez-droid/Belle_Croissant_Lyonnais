@@ -7,6 +7,7 @@ namespace MisClases
 {
     public class DireccionDAO : Conexion
     {
+        Direccion direccion = new Direccion();
         public bool ExisteDireccion(int usuarioId, string tipo)
         {
             using (SqlConnection conexion = ObtenerConexion())
@@ -143,6 +144,24 @@ namespace MisClases
             }
 
             return direcciones;
+        }
+
+        public bool EliminarFavorito(Direccion direccion)
+        {
+            using (SqlConnection conexion = ObtenerConexion())
+            {
+                conexion.Open();
+                string consulta = "UPDATE Direccion SET Preferencia = 0 WHERE Direccion_ID = @Direccion_ID";
+
+                using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                {
+                    int direccionId = Convert.ToInt32(direccion.eliminar_fav);
+                    comando.Parameters.AddWithValue("@Direccion_ID", direccionId);
+
+                    int filasAfectadas = comando.ExecuteNonQuery();
+                    return filasAfectadas > 0;
+                }
+            }
         }
 
         public bool MarcarComoFavorita(int direccionId, int usuarioId)

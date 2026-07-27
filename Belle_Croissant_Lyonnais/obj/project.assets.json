@@ -1029,9 +1029,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\Downloads\\CSHARP\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj",
       "projectName": "Belle_Croissant_Lyonnais",
-      "projectPath": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj",
+      "projectPath": "C:\\Users\\USUARIO\\Downloads\\CSHARP\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\Belle_Croissant_Lyonnais\\obj\\",
       "projectStyle": "PackageReference",
@@ -1055,8 +1055,8 @@
           "framework": "net10.0-windows7.0",
           "targetAlias": "net10.0-windows",
           "projectReferences": {
-            "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj"
+            "C:\\Users\\USUARIO\\Downloads\\CSHARP\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\Downloads\\CSHARP\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj"
             }
           }
         }

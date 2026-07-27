@@ -254,6 +254,7 @@
             // lblNombre
             // 
             lblNombre.BorderStyle = BorderStyle.FixedSingle;
+            lblNombre.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblNombre.Location = new Point(318, 273);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(269, 34);
@@ -262,6 +263,7 @@
             // lbl_Apellido
             // 
             lbl_Apellido.BorderStyle = BorderStyle.FixedSingle;
+            lbl_Apellido.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbl_Apellido.Location = new Point(669, 274);
             lbl_Apellido.Name = "lbl_Apellido";
             lbl_Apellido.Size = new Size(269, 34);
@@ -280,6 +282,7 @@
             // lblcorreoelectronico
             // 
             lblcorreoelectronico.BorderStyle = BorderStyle.FixedSingle;
+            lblcorreoelectronico.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblcorreoelectronico.Location = new Point(318, 371);
             lblcorreoelectronico.Name = "lblcorreoelectronico";
             lblcorreoelectronico.Size = new Size(269, 34);
@@ -298,6 +301,7 @@
             // lblTelefono
             // 
             lblTelefono.BorderStyle = BorderStyle.FixedSingle;
+            lblTelefono.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTelefono.Location = new Point(669, 371);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(269, 34);

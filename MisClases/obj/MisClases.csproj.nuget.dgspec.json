@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj": {}
+    "C:\\Users\\USUARIO\\Downloads\\CSHARP\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj": {
+    "C:\\Users\\USUARIO\\Downloads\\CSHARP\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Downloads\\CSHARP\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj",
         "projectName": "MisClases",
-        "projectPath": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj",
+        "projectPath": "C:\\Users\\USUARIO\\Downloads\\CSHARP\\Belle_Croissant_Lyonnais\\MisClases\\MisClases.csproj",
         "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\USUARIO\\Downloads\\csharp\\Belle_Croissant_Lyonnais\\MisClases\\obj\\",
         "projectStyle": "PackageReference",
