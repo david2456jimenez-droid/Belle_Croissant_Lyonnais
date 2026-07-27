@@ -7,6 +7,9 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Historial_Pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Inicio_de_Sesion.cs">
       <SubType>Form</SubType>
     </Compile>

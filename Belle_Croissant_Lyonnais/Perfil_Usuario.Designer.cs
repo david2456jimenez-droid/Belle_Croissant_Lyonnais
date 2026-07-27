@@ -52,10 +52,11 @@
             label4 = new Label();
             lblTelefono = new Label();
             label6 = new Label();
-            lbl_direccionhog = new Label();
-            label8 = new Label();
-            lbldirecciontrab = new Label();
-            label10 = new Label();
+            dataG_direcciones = new DataGridView();
+            radiobtn_domicilio = new RadioButton();
+            radiobtn_recoger = new RadioButton();
+            label1 = new Label();
+            label5 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -63,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Foto_perfil).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataG_direcciones).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -82,7 +84,7 @@
             panel1.ForeColor = SystemColors.ControlDark;
             panel1.Location = new Point(1, -7);
             panel1.Name = "panel1";
-            panel1.Size = new Size(301, 685);
+            panel1.Size = new Size(301, 677);
             panel1.TabIndex = 0;
             // 
             // panel4
@@ -130,6 +132,7 @@
             linkLabel3.TabIndex = 15;
             linkLabel3.TabStop = true;
             linkLabel3.Text = "Historial de pedidos";
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
             // pictureBox4
             // 
@@ -215,7 +218,7 @@
             panel2.Controls.Add(Foto_perfil);
             panel2.Location = new Point(302, 1);
             panel2.Name = "panel2";
-            panel2.Size = new Size(711, 187);
+            panel2.Size = new Size(682, 187);
             panel2.TabIndex = 1;
             // 
             // lbl_UsuarioPerfil
@@ -224,14 +227,14 @@
             lbl_UsuarioPerfil.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbl_UsuarioPerfil.Location = new Point(144, 132);
             lbl_UsuarioPerfil.Name = "lbl_UsuarioPerfil";
-            lbl_UsuarioPerfil.Size = new Size(155, 25);
+            lbl_UsuarioPerfil.Size = new Size(185, 25);
             lbl_UsuarioPerfil.TabIndex = 1;
-            lbl_UsuarioPerfil.Text = "Manuel Jimenez";
+            lbl_UsuarioPerfil.Text = "Nombre de usuario";
             // 
             // Foto_perfil
             // 
             Foto_perfil.Image = (Image)resources.GetObject("Foto_perfil.Image");
-            Foto_perfil.Location = new Point(12, 65);
+            Foto_perfil.Location = new Point(12, 67);
             Foto_perfil.Name = "Foto_perfil";
             Foto_perfil.Size = new Size(122, 119);
             Foto_perfil.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -242,7 +245,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(314, 224);
+            label2.Location = new Point(314, 242);
             label2.Name = "label2";
             label2.Size = new Size(71, 21);
             label2.TabIndex = 2;
@@ -251,7 +254,7 @@
             // lblNombre
             // 
             lblNombre.BorderStyle = BorderStyle.FixedSingle;
-            lblNombre.Location = new Point(318, 255);
+            lblNombre.Location = new Point(318, 273);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(269, 34);
             lblNombre.TabIndex = 3;
@@ -259,7 +262,7 @@
             // lbl_Apellido
             // 
             lbl_Apellido.BorderStyle = BorderStyle.FixedSingle;
-            lbl_Apellido.Location = new Point(669, 256);
+            lbl_Apellido.Location = new Point(669, 274);
             lbl_Apellido.Name = "lbl_Apellido";
             lbl_Apellido.Size = new Size(269, 34);
             lbl_Apellido.TabIndex = 5;
@@ -268,7 +271,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(665, 225);
+            label3.Location = new Point(665, 243);
             label3.Name = "label3";
             label3.Size = new Size(72, 21);
             label3.TabIndex = 4;
@@ -277,7 +280,7 @@
             // lblcorreoelectronico
             // 
             lblcorreoelectronico.BorderStyle = BorderStyle.FixedSingle;
-            lblcorreoelectronico.Location = new Point(318, 353);
+            lblcorreoelectronico.Location = new Point(318, 371);
             lblcorreoelectronico.Name = "lblcorreoelectronico";
             lblcorreoelectronico.Size = new Size(269, 34);
             lblcorreoelectronico.TabIndex = 7;
@@ -286,7 +289,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(314, 322);
+            label4.Location = new Point(314, 340);
             label4.Name = "label4";
             label4.Size = new Size(147, 21);
             label4.TabIndex = 6;
@@ -295,7 +298,7 @@
             // lblTelefono
             // 
             lblTelefono.BorderStyle = BorderStyle.FixedSingle;
-            lblTelefono.Location = new Point(669, 353);
+            lblTelefono.Location = new Point(669, 371);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(269, 34);
             lblTelefono.TabIndex = 9;
@@ -304,58 +307,77 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(665, 322);
+            label6.Location = new Point(665, 340);
             label6.Name = "label6";
             label6.Size = new Size(74, 21);
             label6.TabIndex = 8;
             label6.Text = "Telefono";
             // 
-            // lbl_direccionhog
+            // dataG_direcciones
             // 
-            lbl_direccionhog.BorderStyle = BorderStyle.FixedSingle;
-            lbl_direccionhog.Location = new Point(318, 458);
-            lbl_direccionhog.Name = "lbl_direccionhog";
-            lbl_direccionhog.Size = new Size(269, 34);
-            lbl_direccionhog.TabIndex = 11;
+            dataG_direcciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataG_direcciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataG_direcciones.Location = new Point(318, 475);
+            dataG_direcciones.Name = "dataG_direcciones";
+            dataG_direcciones.RowHeadersVisible = false;
+            dataG_direcciones.Size = new Size(269, 177);
+            dataG_direcciones.TabIndex = 10;
             // 
-            // label8
+            // radiobtn_domicilio
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(314, 427);
-            label8.Name = "label8";
-            label8.Size = new Size(153, 21);
-            label8.TabIndex = 10;
-            label8.Text = "Direccion del hogar";
+            radiobtn_domicilio.AutoSize = true;
+            radiobtn_domicilio.Enabled = false;
+            radiobtn_domicilio.Location = new Point(669, 466);
+            radiobtn_domicilio.Name = "radiobtn_domicilio";
+            radiobtn_domicilio.Size = new Size(76, 19);
+            radiobtn_domicilio.TabIndex = 11;
+            radiobtn_domicilio.TabStop = true;
+            radiobtn_domicilio.Text = "Domicilio";
+            radiobtn_domicilio.UseVisualStyleBackColor = true;
             // 
-            // lbldirecciontrab
+            // radiobtn_recoger
             // 
-            lbldirecciontrab.BorderStyle = BorderStyle.FixedSingle;
-            lbldirecciontrab.Location = new Point(669, 458);
-            lbldirecciontrab.Name = "lbldirecciontrab";
-            lbldirecciontrab.Size = new Size(269, 34);
-            lbldirecciontrab.TabIndex = 13;
+            radiobtn_recoger.AutoSize = true;
+            radiobtn_recoger.Enabled = false;
+            radiobtn_recoger.Location = new Point(769, 467);
+            radiobtn_recoger.Name = "radiobtn_recoger";
+            radiobtn_recoger.Size = new Size(78, 19);
+            radiobtn_recoger.TabIndex = 12;
+            radiobtn_recoger.TabStop = true;
+            radiobtn_recoger.Text = "Recogerlo";
+            radiobtn_recoger.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // label1
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(665, 427);
-            label10.Name = "label10";
-            label10.Size = new Size(158, 21);
-            label10.TabIndex = 12;
-            label10.Text = "Direccion de trabajo";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(314, 433);
+            label1.Name = "label1";
+            label1.Size = new Size(175, 21);
+            label1.TabIndex = 13;
+            label1.Text = "Direcciones de usuario";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(665, 433);
+            label5.Name = "label5";
+            label5.Size = new Size(173, 21);
+            label5.TabIndex = 14;
+            label5.Text = "Preferencia de pedido";
             // 
             // Perfil_Usuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.HighlightText;
-            ClientSize = new Size(1013, 674);
-            Controls.Add(lbldirecciontrab);
-            Controls.Add(label10);
-            Controls.Add(lbl_direccionhog);
-            Controls.Add(label8);
+            ClientSize = new Size(967, 664);
+            Controls.Add(label5);
+            Controls.Add(label1);
+            Controls.Add(radiobtn_recoger);
+            Controls.Add(radiobtn_domicilio);
+            Controls.Add(dataG_direcciones);
             Controls.Add(lblTelefono);
             Controls.Add(label6);
             Controls.Add(lblcorreoelectronico);
@@ -378,6 +400,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)Foto_perfil).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataG_direcciones).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -396,8 +419,6 @@
         private Label label4;
         private Label lblTelefono;
         private Label label6;
-        private Label lbl_direccionhog;
-        private Label label8;
         private Label label11;
         private Panel panel3;
         public PictureBox pictureBox1;
@@ -409,7 +430,10 @@
         public PictureBox pictureBox2;
         public PictureBox pictureBox5;
         private Panel panel4;
-        private Label lbldirecciontrab;
-        private Label label10;
+        private DataGridView dataG_direcciones;
+        private RadioButton radiobtn_domicilio;
+        private RadioButton radiobtn_recoger;
+        private Label label1;
+        private Label label5;
     }
 }

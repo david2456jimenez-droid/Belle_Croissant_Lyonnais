@@ -37,7 +37,7 @@ namespace Belle_Croissant_Lyonnais
 
         private void txtbox_contraseña_TextChanged(object sender, EventArgs e)
         {
-            txtbox_contraseña.PasswordChar = '*';
+            txtbox_contraseña.PasswordChar = '#';
         }
 
         private void link_recuperacion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -45,6 +45,11 @@ namespace Belle_Croissant_Lyonnais
             Form1 form = new Form1();
             form.Show();
             this.Hide();
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

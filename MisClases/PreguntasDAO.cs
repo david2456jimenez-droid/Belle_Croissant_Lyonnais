@@ -13,6 +13,7 @@ namespace MisClases
             List<Preguntas> Lista_preg = new List<Preguntas>();
             using (SqlConnection conexion = ObtenerConexion())
             {
+
                 conexion.Open();
                 string consulta_preg = "SELECT * FROM Pregunta";
 

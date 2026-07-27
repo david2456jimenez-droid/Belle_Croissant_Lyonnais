@@ -20,8 +20,6 @@ namespace Belle_Croissant_Lyonnais
         {
             InitializeComponent();
             usuario = usuarioedit;
-            combox_TipoDirec.Items.Add("Hogar");
-            combox_TipoDirec.Items.Add("Trabajo");
         }
 
         private void linkInfo_usuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -32,17 +30,30 @@ namespace Belle_Croissant_Lyonnais
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void EditarPerfil_Load(object sender, EventArgs e)
         {
+            CargarDatosEnPantalla();
+        }
+
+        private void CargarDatosEnPantalla()
+        {
+            lbl_UsuarioPerfil.Text = usuario.Nombre + usuario.Apellido;
             txt_correo.Text = usuario.Email;
             txt_nombre.Text = usuario.Nombre;
             txt_apellido.Text = usuario.Apellido;
+            if (!string.IsNullOrEmpty(usuario.Foto_Perfil))
+            {
+                Foto_perfil.Image = Image.FromFile(usuario.Foto_Perfil);
+            }
             txt_telefono.Text = usuario.Telefono ?? ""; //por si viene null, usar vacio
+            if (usuario.Metodo_Entrega)
+            {
+                radiobtn_Domicilio.Checked = true;
+            }
+            else
+            {
+                radiobtn_Recoger.Checked = true;
+            }
 
             // Para "Eliminar dirección" -> todas las direcciones
             List<Direccion> todasLasDirecciones = direccionDAO.ObtenerDireccionesPorUsuario(usuario.Usuario_ID);
@@ -50,7 +61,7 @@ namespace Belle_Croissant_Lyonnais
             combox_elimidirec.DataSource = todasLasDirecciones;
             combox_elimidirec.DisplayMember = "Direccion_";
             combox_elimidirec.ValueMember = "Direccion_ID";
-            combox_eliminFavorit.SelectedIndex = -1;
+            combox_elimidirec.SelectedIndex = -1;
 
             // Para "Agregar Favoritos" -> solo las que NO son favoritas
             List<Direccion> noFavoritas = direccionDAO.ObtenerDireccionesPorUsuario(usuario.Usuario_ID, false);
@@ -58,7 +69,7 @@ namespace Belle_Croissant_Lyonnais
             combox_FavoritoDirec.DataSource = noFavoritas;
             combox_FavoritoDirec.DisplayMember = "Direccion_";
             combox_FavoritoDirec.ValueMember = "Direccion_ID";
-            combox_eliminFavorit.SelectedIndex = -1;
+            combox_FavoritoDirec.SelectedIndex = -1;
 
             // Para "Eliminar de Favoritos" -> solo las que SÍ son favoritas
             List<Direccion> siFavoritas = direccionDAO.ObtenerDireccionesPorUsuario(usuario.Usuario_ID, true);
@@ -73,40 +84,33 @@ namespace Belle_Croissant_Lyonnais
             usuario.Email = txt_correo.Text;
 
             checksubs.Checked = usuario.Suscripcion;
-
             if (usuario.Telefono != null)
             {
                 usuario.Telefono = txt_telefono.Text;
             }
-
-        }
-
-        private void btn_Guardar_Click(object sender, EventArgs e)
-        {
-            usuario.Nombre = txt_nombre.Text;
-            usuario.Apellido = txt_apellido.Text;
         }
 
         private void btn_cancelElim_Click(object sender, EventArgs e)
         {
-            combox_elimidirec.Text = "";
+            combox_elimidirec.SelectedIndex = -1;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            combox_TipoDirec.Text = "";
+            txtbox_Lugar.Text = "";
+            txt_direccion.Text = "";
             txt_direccion.Enabled = false;
             checkpreferencia.Enabled = false;
         }
 
         private void btn_cancelAgreg_Click(object sender, EventArgs e)
         {
-            combox_FavoritoDirec.Text = "";
+            combox_FavoritoDirec.SelectedIndex = -1;
         }
 
         private void btn_cancelElimFav_Click(object sender, EventArgs e)
         {
-            combox_eliminFavorit.Text = "";
+            combox_eliminFavorit.SelectedIndex = -1;
         }
 
         private void btn_Guardar_Click_1(object sender, EventArgs e)
@@ -118,6 +122,18 @@ namespace Belle_Croissant_Lyonnais
             if (txt_nombre.Text != "")
             {
                 usuario.Nombre = txt_nombre.Text;
+            }
+            if (txt_correo.Text != "")
+            {
+                if (txt_correo.Text.EndsWith("@gmail.com") || txt_correo.Text.EndsWith("@hotmail.com"))
+                {
+                    usuario.Email = txt_correo.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Correo ingresado no valido");
+                    return;
+                }
             }
             if (txt_apellido.Text != "")
             {
@@ -131,8 +147,16 @@ namespace Belle_Croissant_Lyonnais
             {
                 usuario.Suscripcion = false;
             }
+            if (radiobtn_Domicilio.Checked)
+            {
+                usuario.Metodo_Entrega = true;
+            }
+            if (radiobtn_Recoger.Checked)
+            {
+                usuario.Metodo_Entrega = false;
+            }
 
-            if (combox_TipoDirec.SelectedItem == null)
+            if (txtbox_Lugar.Text == "")
             {
 
             }
@@ -146,7 +170,7 @@ namespace Belle_Croissant_Lyonnais
                 {
                     direccion.Preferencia = false;
                 }
-                direccion.Tipo = combox_TipoDirec.SelectedItem.ToString();
+                direccion.Lugar = txtbox_Lugar.Text;
                 direccion.Direccion_ = txt_direccion.Text;
 
 
@@ -163,11 +187,11 @@ namespace Belle_Croissant_Lyonnais
             }
             if (combox_FavoritoDirec.SelectedItem == null)
             {
-
             }
             else
             {
-                direccion.favoritos = combox_FavoritoDirec.SelectedItem.ToString();
+                int direccionIdFavorito = Convert.ToInt32(combox_FavoritoDirec.SelectedValue);
+                direccionDAO.MarcarComoFavorita(direccionIdFavorito, usuario.Usuario_ID);
             }
             if (combox_eliminFavorit.SelectedItem == null)
             {
@@ -182,29 +206,24 @@ namespace Belle_Croissant_Lyonnais
             bool actualizado = usuarioDAO.ActualizarUsuario(usuario);
 
             if (actualizado)
+            {
                 MessageBox.Show("Perfil actualizado correctamente");
+
+                //refrescar pantalla
+                usuario = usuarioDAO.ObtenerUsuarioPorEmail(usuario.Email);
+                CargarDatosEnPantalla();
+            }
+
             else
+            {
                 MessageBox.Show("No se pudo actualizar el perfil");
+            }
 
         }
 
         private void txt_direccion_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void combox_TipoDirec_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (combox_TipoDirec.SelectedItem == null)
-            {
-                txt_direccion.Enabled = false;
-                checkpreferencia.Enabled = false;
-            }
-            else
-            {
-                txt_direccion.Enabled = true;
-                checkpreferencia.Enabled = true;
-            }
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -226,6 +245,14 @@ namespace Belle_Croissant_Lyonnais
             cerrasesion.Show();
             this.Hide();
             this.Close();
+        }
+
+        private void txtbox_Lugar_TextChanged(object sender, EventArgs e)
+        {
+            if(txtbox_Lugar.Text != "")
+            {
+                txt_direccion.Enabled = true;
+            }
         }
     }
 }

@@ -75,12 +75,31 @@ namespace Belle_Croissant_Lyonnais
             if (actualizado)
             {
                 MessageBox.Show("Contraseña actualizada correctamente");
-                this.Close();
+                Inicio_de_Sesion regresar = new Inicio_de_Sesion();
+                regresar.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Ocurrió un error al actualizar la contraseña");
             }
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            Inicio_de_Sesion regresar = new Inicio_de_Sesion();
+            regresar.Show();
+            this.Hide();
+        }
+
+        private void txtbox_contraseña_TextChanged(object sender, EventArgs e)
+        {
+            txtbox_contraseña.PasswordChar = '#';
+        }
+
+        private void txtbox_reestcontraseña_TextChanged(object sender, EventArgs e)
+        {
+            txtbox_contraseña.PasswordChar = '#';
         }
     }
 }

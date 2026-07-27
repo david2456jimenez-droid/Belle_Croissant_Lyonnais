@@ -158,6 +158,7 @@
             // 
             // combox_preg
             // 
+            combox_preg.DropDownStyle = ComboBoxStyle.DropDownList;
             combox_preg.FormattingEnabled = true;
             combox_preg.Location = new Point(150, 574);
             combox_preg.Name = "combox_preg";

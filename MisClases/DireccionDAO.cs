@@ -13,12 +13,12 @@ namespace MisClases
             {
                 conexion.Open();
                 string consulta = "SELECT COUNT(*) FROM Direccion INNER JOIN Direccion_Usuario ON Direccion.Direccion_ID = Direccion_Usuario.Direccion_ID " +
-                    "WHERE Direccion_Usuario.Usuario_ID = @Usuario_ID AND Direccion.Tipo = @Tipo";
+                    "WHERE Direccion_Usuario.Usuario_ID = @Usuario_ID AND Direccion.Lugar = @Lugar";
 
                 using (SqlCommand comando = new SqlCommand(consulta, conexion))
                 {
                     comando.Parameters.AddWithValue("@Usuario_ID", usuarioId);
-                    comando.Parameters.AddWithValue("@Tipo", tipo);
+                    comando.Parameters.AddWithValue("@Lugar", tipo);
 
                     int cantidad = (int)comando.ExecuteScalar();
                     return cantidad > 0;
@@ -30,12 +30,12 @@ namespace MisClases
             string consulta = "SELECT Direccion.Direccion_ID " +
                  "FROM Direccion " +
                  "INNER JOIN Direccion_Usuario ON Direccion.Direccion_ID = Direccion_Usuario.Direccion_ID " +
-                 "WHERE Direccion_Usuario.Usuario_ID = @Usuario_ID AND Direccion.Tipo = @Tipo";
+                 "WHERE Direccion_Usuario.Usuario_ID = @Usuario_ID AND Direccion.Lugar = @Lugar";
 
             using (SqlCommand comando = new SqlCommand(consulta, conexion, transaccion))
             {
                 comando.Parameters.AddWithValue("@Usuario_ID", usuarioId);
-                comando.Parameters.AddWithValue("@Tipo", tipo);
+                comando.Parameters.AddWithValue("@Lugar", tipo);
                 return (int)comando.ExecuteScalar();
             }
         }
@@ -49,9 +49,9 @@ namespace MisClases
 
                 try
                 {
-                    if (ExisteDireccion(idUsuario, direccion.Tipo))
+                    if (ExisteDireccion(idUsuario, direccion.Lugar))
                     {
-                        int direccionId = ObtenerDireccionIdPorTipo(idUsuario, direccion.Tipo, conexion, transaccion);
+                        int direccionId = ObtenerDireccionIdPorTipo(idUsuario, direccion.Lugar, conexion, transaccion);
 
                         string consulta = @"UPDATE Direccion" +
                             "SET Direccion = @direccion, Preferencia = @preferencia" +
@@ -67,12 +67,12 @@ namespace MisClases
 
                     else
                     {
-                        string consulta = "INSERT INTO Direccion (Tipo, Direccion, Preferencia) " +
+                        string consulta = "INSERT INTO Direccion (Lugar, Direccion, Preferencia) " +
                             "OUTPUT INSERTED.Direccion_ID " +
-                            "VALUES (@tipo, @direccion, @preferencia)";
+                            "VALUES (@Lugar, @direccion, @preferencia)";
 
                         SqlCommand comando = new SqlCommand(consulta, conexion, transaccion);
-                        comando.Parameters.AddWithValue("@tipo", direccion.Tipo);
+                        comando.Parameters.AddWithValue("@Lugar", direccion.Lugar);
                         comando.Parameters.AddWithValue("@direccion", direccion.Direccion_);
                         comando.Parameters.AddWithValue("@preferencia", direccion.Preferencia);
 
@@ -107,7 +107,7 @@ namespace MisClases
             using (SqlConnection conexion = ObtenerConexion())
             {
                 conexion.Open();
-                string consulta = "SELECT Direccion.Direccion_ID, Direccion.Tipo, Direccion.Direccion, Direccion.Preferencia " +
+                string consulta = "SELECT Direccion.Direccion_ID, Direccion.Lugar, Direccion.Direccion, Direccion.Preferencia " +
                                    "FROM Direccion " +
                                    "INNER JOIN Direccion_Usuario ON Direccion.Direccion_ID = Direccion_Usuario.Direccion_ID " +
                                    "WHERE Direccion_Usuario.Usuario_ID = @Usuario_ID";
@@ -132,7 +132,7 @@ namespace MisClases
                         {
                             Direccion direccion = new Direccion();
                             direccion.Direccion_ID = Convert.ToInt32(reader["Direccion_ID"]);
-                            direccion.Tipo = reader["Tipo"].ToString();
+                            direccion.Lugar = reader["Lugar"].ToString();
                             direccion.Direccion_ = reader["Direccion"].ToString();
                             direccion.Preferencia = Convert.ToBoolean(reader["Preferencia"]);
 
@@ -143,6 +143,40 @@ namespace MisClases
             }
 
             return direcciones;
+        }
+
+        public bool MarcarComoFavorita(int direccionId, int usuarioId)
+        {
+            using (SqlConnection conexion = ObtenerConexion())
+            {
+                conexion.Open();
+                SqlTransaction transaccion = conexion.BeginTransaction();
+
+                try
+                {
+                    string consultaQuitar = "UPDATE Direccion SET Preferencia = 0 " +
+                        "WHERE Direccion_ID IN (SELECT Direccion_ID FROM Direccion_Usuario WHERE Usuario_ID = @Usuario_ID)";
+
+                    SqlCommand cmdQuitar = new SqlCommand(consultaQuitar, conexion, transaccion);
+                    cmdQuitar.Parameters.AddWithValue("@Usuario_ID", usuarioId);
+                    cmdQuitar.ExecuteNonQuery();
+
+                    string consultaMarcar = "UPDATE Direccion SET Preferencia = 1 WHERE Direccion_ID = @Direccion_ID";
+
+                    SqlCommand cmdMarcar = new SqlCommand(consultaMarcar, conexion, transaccion);
+                    cmdMarcar.Parameters.AddWithValue("@Direccion_ID", direccionId);
+                    cmdMarcar.ExecuteNonQuery();
+
+                    transaccion.Commit();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    transaccion.Rollback();
+                    MessageBox.Show(ex.Message);
+                    return false;
+                }
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ namespace MisClases
     public class Direccion
     {
         public int Direccion_ID { get; set; }
-        public string? Tipo { get; set; }
+        public string? Lugar { get; set; }
         public string? Direccion_ {  get; set; }
         public bool Preferencia {  get; set; }
         public string? eliminardireccion { get; set; }

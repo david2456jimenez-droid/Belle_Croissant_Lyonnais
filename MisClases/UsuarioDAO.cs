@@ -7,8 +7,10 @@ namespace MisClases
 {
     public class UsuarioDAO : Conexion
     {
+
         public Usuario ObtenerUsuarioPorEmail(string email)
         {
+            
             Usuario usuario1 = null;
             using (SqlConnection conexion = ObtenerConexion())
             {
@@ -32,7 +34,10 @@ namespace MisClases
                             usuario1.Apellido = reader["Apellido"].ToString();
                             usuario1.Suscripcion = Convert.ToBoolean(reader["Suscripcion"]);
                             usuario1.Respuesta_Seguridad = reader["Respuesta_Seguridad"].ToString();
-                            usuario1.Metodo_Entrega = reader["Metodo_Entrega"].ToString();
+                            if (reader["Metodo_Entrega"] != DBNull.Value)
+                            {
+                                usuario1.Metodo_Entrega = Convert.ToBoolean(reader["Metodo_Entrega"]);
+                            }
                             if (reader["telefono"] != DBNull.Value)
                             {
                                 usuario1.Telefono = reader["Telefono"].ToString();
@@ -51,6 +56,7 @@ namespace MisClases
 
         public bool validacion_email(Usuario usuario)
         {
+            
             using (SqlConnection conexion = ObtenerConexion())
             {
                 conexion.Open();
@@ -66,13 +72,13 @@ namespace MisClases
             }
         }
 
-        public bool registrar_usuario(Usuario usuario)
+        public bool registrar_usuario(Usuario usuario)  
         {
             using (SqlConnection conexion = ObtenerConexion())
             {
                 conexion.Open();
-                string consulta = "INSERT INTO Usuario(Pregunta_ID,Nombre,Apellido,Email,Contraseña,Suscripcion, Respuesta_Seguridad)" +
-                    "VALUES(@Pregunta_ID,@Nombre,@Apellido,@Email,@Contraseña,@Suscripcion, @Respuesta_Seguridad)";
+                string consulta = "INSERT INTO Usuario(Pregunta_ID,Nombre,Apellido,Email,Contraseña,Suscripcion,Metodo_Entrega,Respuesta_Seguridad) " +
+                    "VALUES(@Pregunta_ID,@Nombre,@Apellido,@Email,@Contraseña,@Suscripcion,@Metodo_Entrega,@Respuesta_Seguridad)";
 
                 using (SqlCommand comando = new SqlCommand(consulta, conexion))
                 {
@@ -83,8 +89,10 @@ namespace MisClases
                     comando.Parameters.AddWithValue("@Contraseña", usuario.Contraseña);
                     comando.Parameters.AddWithValue("@Suscripcion", usuario.Suscripcion);
                     comando.Parameters.AddWithValue("@Respuesta_Seguridad", usuario.Respuesta_Seguridad);
+                    comando.Parameters.AddWithValue("@Metodo_Entrega", usuario.Metodo_Entrega);
 
-                    int guardar = comando.ExecuteNonQuery();
+
+                    int guardar = comando.ExecuteNonQuery();  
 
                     return guardar > 0;
                 }
@@ -96,17 +104,34 @@ namespace MisClases
             using (SqlConnection conexion = ObtenerConexion())
             {
                 conexion.Open();
-                string consulta = "UPDATE Usuario SET Nombre=@Nombre, Apellido=@Apellido, Email=@Correo, Telefono=@Telefono, Foto_Perfil=@Foto_Perfil, Suscripcion=@Suscripcion WHERE Usuario_ID=@Usuario_ID";
+                string consulta = "UPDATE Usuario SET Nombre=@Nombre, Apellido=@Apellido, Email=@Correo, Telefono=@Telefono, Foto_Perfil=@Foto_Perfil, Suscripcion=@Suscripcion, Metodo_Entrega=@Metodo_Entrega WHERE Usuario_ID=@Usuario_ID";
 
                 using (SqlCommand comando = new SqlCommand(consulta, conexion))
                 {
                     comando.Parameters.AddWithValue("@Nombre", usuario.Nombre);
                     comando.Parameters.AddWithValue("@Apellido", usuario.Apellido);
                     comando.Parameters.AddWithValue("@Correo", usuario.Email);
-                    comando.Parameters.AddWithValue("@Telefono", usuario.Telefono);
-                    comando.Parameters.AddWithValue("@Foto_Perfil", usuario.Foto_Perfil);
                     comando.Parameters.AddWithValue("@Usuario_ID", usuario.Usuario_ID);
                     comando.Parameters.AddWithValue("@Suscripcion", usuario.Suscripcion);
+                    comando.Parameters.AddWithValue("@Metodo_Entrega", usuario.Metodo_Entrega);
+
+                    if (string.IsNullOrWhiteSpace(usuario.Foto_Perfil))
+                    {
+                        comando.Parameters.AddWithValue("@Foto_Perfil", DBNull.Value);
+                    }
+                    else
+                    {
+                        comando.Parameters.AddWithValue("@Foto_Perfil", usuario.Foto_Perfil);
+                    }
+
+                    if (string.IsNullOrWhiteSpace(usuario.Telefono))
+                    {
+                        comando.Parameters.AddWithValue("@Telefono", DBNull.Value);
+                    }
+                    else
+                    {
+                        comando.Parameters.AddWithValue("@Telefono", usuario.Telefono);
+                    }
 
                     int filasAfectadas = comando.ExecuteNonQuery();
                     return filasAfectadas > 0;

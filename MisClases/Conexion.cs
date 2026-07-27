@@ -15,7 +15,7 @@ namespace MisClases
             CadenaConexion = ConfigurationManager.ConnectionStrings["ConexionSQL"].ConnectionString;
         }
 
-        protected SqlConnection ObtenerConexion()
+        public SqlConnection ObtenerConexion()
         {
             return new SqlConnection(CadenaConexion);
         }

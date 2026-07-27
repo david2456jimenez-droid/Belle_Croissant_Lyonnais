@@ -11,7 +11,7 @@
         public string? Telefono { get; set; }
         public string? Foto_Perfil { get; set; }
         public bool Suscripcion { get; set; }
-        public string? Metodo_Entrega {  get; set; }
+        public bool Metodo_Entrega {  get; set; }
         public string? Respuesta_Seguridad {  get; set; }
     }
 }

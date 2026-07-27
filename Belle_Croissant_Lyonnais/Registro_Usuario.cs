@@ -74,37 +74,62 @@ namespace Belle_Croissant_Lyonnais
                     }
                     else
                     {
+                        if(txtBox_email.Text.EndsWith("@gmail.com") || txtBox_email.Text.EndsWith("@hotmail.com"))
+                        {
+                            //Primero Encriptamos informacion importante antes de seguir antes de seguir con el siguiente proceso
+                            string contraseña_cript = BCrypt.Net.BCrypt.HashPassword(txtBox_contraseña.Text);
+                            string respuesta_cript = BCrypt.Net.BCrypt.HashPassword(txtBox_respuesta.Text);
 
-                        //Primero Encriptamos informacion importante antes de seguir antes de seguir con el siguiente proceso
-                        string contraseña_cript = BCrypt.Net.BCrypt.HashPassword(txtBox_contraseña.Text);
-                        string respuesta_cript = BCrypt.Net.BCrypt.HashPassword(txtBox_respuesta.Text);
-
-                        //Agregar los Datos a las propiedade de usuario
-                        usuario.Pregunta_ID = Convert.ToInt32(combox_preg.SelectedValue);
-                        usuario.Nombre = txtbox_nombre.Text;
-                        usuario.Apellido = txtbox_apellido.Text;
-                        usuario.Email = txtBox_email.Text;
-                        usuario.Contraseña = contraseña_cript;
-                        usuario.Respuesta_Seguridad = respuesta_cript;
-                        usuario.Suscripcion = check_subsc.Checked;
+                            //Agregar los Datos a las propiedade de usuario
+                            usuario.Pregunta_ID = Convert.ToInt32(combox_preg.SelectedValue);
+                            usuario.Nombre = txtbox_nombre.Text;
+                            usuario.Apellido = txtbox_apellido.Text;
+                            usuario.Email = txtBox_email.Text;
+                            usuario.Contraseña = contraseña_cript;
+                            usuario.Respuesta_Seguridad = respuesta_cript;
+                            usuario.Suscripcion = check_subsc.Checked;
+                            usuario.Metodo_Entrega = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Correo ingresado no valido");
+                            txtBox_email.Text = "";
+                            return;
+                        }
 
 
                         bool registro = usuarioDAO.registrar_usuario(usuario);//para saber si el usuario fue agregado correctamente
 
+                        
+
                         if (registro)
                         {
-                            //Limpiar los textbox
-                            txtBox_email.Text = "";
-                            txtbox_nombre.Text = "";
-                            txtbox_apellido.Text = "";
-                            txtBox_ConfContraseña.Text = "";
-                            txtBox_contraseña.Text = "";
-                            txtBox_respuesta.Text = "";
-                            MessageBox.Show($"Registro de usuario exitoso Bienvenido sr/a {txtbox_nombre.Text + " " + txtbox_apellido.Text}");
+                            usuario = usuarioDAO.ObtenerUsuarioPorEmail(txtBox_email.Text);
+                            if (BCrypt.Net.BCrypt.Verify(txtBox_contraseña.Text, usuario.Contraseña))
+                            {
+                                //Limpiar los textbox
+                                txtBox_email.Text = "";
+                                txtbox_nombre.Text = "";
+                                txtbox_apellido.Text = "";
+                                txtBox_ConfContraseña.Text = "";
+                                txtBox_contraseña.Text = "";
+                                txtBox_respuesta.Text = "";
+                                MessageBox.Show($"Registro de usuario exitoso Bienvenido sr/a {txtbox_nombre.Text + " " + txtbox_apellido.Text}");
+
+                                Perfil_Usuario perfil = new Perfil_Usuario(usuario);
+                                perfil.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Hubo un error al intentar iniciar sesion");
+                                return;
+                            }
+                            
                         }
                         else
                         {
-                            MessageBox.Show("Ocurrio en error al registrar");
+                            MessageBox.Show("Ocurrio un error al registrar");
                         }
                     }
                 }
@@ -114,12 +139,12 @@ namespace Belle_Croissant_Lyonnais
 
         private void txtBox_contraseña_TextChanged(object sender, EventArgs e)
         {
-            txtBox_contraseña.PasswordChar = '*';
+            txtBox_contraseña.PasswordChar = '#';
         }
 
         private void txtBox_ConfContraseña_TextChanged(object sender, EventArgs e)
         {
-            txtBox_ConfContraseña.PasswordChar = '*';
+            txtBox_ConfContraseña.PasswordChar = '#';
         }
     }
 }

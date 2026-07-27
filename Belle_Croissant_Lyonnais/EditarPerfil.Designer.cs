@@ -50,7 +50,6 @@
             pictureBox1 = new PictureBox();
             label11 = new Label();
             panel3 = new Panel();
-            combox_TipoDirec = new ComboBox();
             label1 = new Label();
             label5 = new Label();
             panel5 = new Panel();
@@ -60,7 +59,6 @@
             combox_FavoritoDirec = new ComboBox();
             label10 = new Label();
             combox_eliminFavorit = new ComboBox();
-            btn_cancelar = new Button();
             btn_Guardar = new Button();
             txt_direccion = new TextBox();
             txt_telefono = new TextBox();
@@ -73,6 +71,10 @@
             button1 = new Button();
             checkpreferencia = new CheckBox();
             checksubs = new CheckBox();
+            txtbox_Lugar = new TextBox();
+            radiobtn_Domicilio = new RadioButton();
+            radiobtn_Recoger = new RadioButton();
+            label12 = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Foto_perfil).BeginInit();
@@ -97,7 +99,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(690, 324);
+            label6.Location = new Point(690, 302);
             label6.Name = "label6";
             label6.Size = new Size(74, 21);
             label6.TabIndex = 22;
@@ -107,7 +109,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(313, 324);
+            label4.Location = new Point(313, 302);
             label4.Name = "label4";
             label4.Size = new Size(147, 21);
             label4.TabIndex = 20;
@@ -147,7 +149,7 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(116, 56);
+            pictureBox6.Location = new Point(116, 58);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(30, 30);
             pictureBox6.TabIndex = 57;
@@ -160,14 +162,14 @@
             lbl_UsuarioPerfil.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbl_UsuarioPerfil.Location = new Point(144, 132);
             lbl_UsuarioPerfil.Name = "lbl_UsuarioPerfil";
-            lbl_UsuarioPerfil.Size = new Size(155, 25);
+            lbl_UsuarioPerfil.Size = new Size(185, 25);
             lbl_UsuarioPerfil.TabIndex = 1;
-            lbl_UsuarioPerfil.Text = "Manuel Jimenez";
+            lbl_UsuarioPerfil.Text = "Nombre de usuario";
             // 
             // Foto_perfil
             // 
             Foto_perfil.Image = (Image)resources.GetObject("Foto_perfil.Image");
-            Foto_perfil.Location = new Point(12, 65);
+            Foto_perfil.Location = new Point(12, 67);
             Foto_perfil.Name = "Foto_perfil";
             Foto_perfil.Size = new Size(122, 119);
             Foto_perfil.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -317,24 +319,15 @@
             panel3.Size = new Size(250, 1);
             panel3.TabIndex = 1;
             // 
-            // combox_TipoDirec
-            // 
-            combox_TipoDirec.FormattingEnabled = true;
-            combox_TipoDirec.Location = new Point(417, 494);
-            combox_TipoDirec.Name = "combox_TipoDirec";
-            combox_TipoDirec.Size = new Size(185, 23);
-            combox_TipoDirec.TabIndex = 34;
-            combox_TipoDirec.SelectedIndexChanged += combox_TipoDirec_SelectedIndexChanged;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(317, 492);
             label1.Name = "label1";
-            label1.Size = new Size(94, 21);
+            label1.Size = new Size(51, 21);
             label1.TabIndex = 35;
-            label1.Text = "Seleccionar";
+            label1.Text = "Lugar";
             // 
             // label5
             // 
@@ -367,6 +360,7 @@
             // 
             // combox_elimidirec
             // 
+            combox_elimidirec.DropDownStyle = ComboBoxStyle.DropDownList;
             combox_elimidirec.FormattingEnabled = true;
             combox_elimidirec.Location = new Point(849, 490);
             combox_elimidirec.Name = "combox_elimidirec";
@@ -385,6 +379,7 @@
             // 
             // combox_FavoritoDirec
             // 
+            combox_FavoritoDirec.DropDownStyle = ComboBoxStyle.DropDownList;
             combox_FavoritoDirec.FormattingEnabled = true;
             combox_FavoritoDirec.Location = new Point(849, 545);
             combox_FavoritoDirec.Name = "combox_FavoritoDirec";
@@ -403,25 +398,12 @@
             // 
             // combox_eliminFavorit
             // 
+            combox_eliminFavorit.DropDownStyle = ComboBoxStyle.DropDownList;
             combox_eliminFavorit.FormattingEnabled = true;
             combox_eliminFavorit.Location = new Point(849, 600);
             combox_eliminFavorit.Name = "combox_eliminFavorit";
             combox_eliminFavorit.Size = new Size(154, 23);
             combox_eliminFavorit.TabIndex = 43;
-            // 
-            // btn_cancelar
-            // 
-            btn_cancelar.BackColor = Color.Crimson;
-            btn_cancelar.FlatStyle = FlatStyle.Popup;
-            btn_cancelar.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_cancelar.ForeColor = SystemColors.ButtonHighlight;
-            btn_cancelar.Location = new Point(647, 665);
-            btn_cancelar.Name = "btn_cancelar";
-            btn_cancelar.Size = new Size(180, 44);
-            btn_cancelar.TabIndex = 45;
-            btn_cancelar.Text = "Cancelar";
-            btn_cancelar.UseVisualStyleBackColor = false;
-            btn_cancelar.Click += button2_Click;
             // 
             // btn_Guardar
             // 
@@ -429,9 +411,9 @@
             btn_Guardar.FlatStyle = FlatStyle.Popup;
             btn_Guardar.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Guardar.ForeColor = SystemColors.ButtonHighlight;
-            btn_Guardar.Location = new Point(424, 665);
+            btn_Guardar.Location = new Point(493, 656);
             btn_Guardar.Name = "btn_Guardar";
-            btn_Guardar.Size = new Size(180, 44);
+            btn_Guardar.Size = new Size(350, 44);
             btn_Guardar.TabIndex = 46;
             btn_Guardar.Text = "Guardar cambios";
             btn_Guardar.UseVisualStyleBackColor = false;
@@ -451,7 +433,7 @@
             // txt_telefono
             // 
             txt_telefono.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txt_telefono.Location = new Point(694, 357);
+            txt_telefono.Location = new Point(694, 335);
             txt_telefono.Multiline = true;
             txt_telefono.Name = "txt_telefono";
             txt_telefono.Size = new Size(329, 34);
@@ -460,7 +442,7 @@
             // txt_correo
             // 
             txt_correo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txt_correo.Location = new Point(317, 357);
+            txt_correo.Location = new Point(317, 335);
             txt_correo.Multiline = true;
             txt_correo.Name = "txt_correo";
             txt_correo.Size = new Size(329, 34);
@@ -532,7 +514,7 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(608, 491);
+            button1.Location = new Point(614, 491);
             button1.Name = "button1";
             button1.Size = new Size(53, 29);
             button1.TabIndex = 55;
@@ -544,7 +526,7 @@
             // 
             checkpreferencia.AutoSize = true;
             checkpreferencia.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            checkpreferencia.Location = new Point(322, 602);
+            checkpreferencia.Location = new Point(322, 590);
             checkpreferencia.Name = "checkpreferencia";
             checkpreferencia.Size = new Size(138, 19);
             checkpreferencia.TabIndex = 56;
@@ -555,18 +537,64 @@
             // 
             checksubs.AutoSize = true;
             checksubs.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            checksubs.Location = new Point(317, 409);
+            checksubs.Location = new Point(317, 386);
             checksubs.Name = "checksubs";
-            checksubs.Size = new Size(90, 19);
+            checksubs.Size = new Size(116, 19);
             checksubs.TabIndex = 57;
-            checksubs.Text = "Subscribirse";
+            checksubs.Text = "Subscribir correo";
             checksubs.UseVisualStyleBackColor = true;
+            // 
+            // txtbox_Lugar
+            // 
+            txtbox_Lugar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtbox_Lugar.Location = new Point(417, 494);
+            txtbox_Lugar.Multiline = true;
+            txtbox_Lugar.Name = "txtbox_Lugar";
+            txtbox_Lugar.Size = new Size(185, 23);
+            txtbox_Lugar.TabIndex = 58;
+            txtbox_Lugar.TextChanged += txtbox_Lugar_TextChanged;
+            // 
+            // radiobtn_Domicilio
+            // 
+            radiobtn_Domicilio.AutoSize = true;
+            radiobtn_Domicilio.Location = new Point(702, 415);
+            radiobtn_Domicilio.Name = "radiobtn_Domicilio";
+            radiobtn_Domicilio.Size = new Size(76, 19);
+            radiobtn_Domicilio.TabIndex = 59;
+            radiobtn_Domicilio.TabStop = true;
+            radiobtn_Domicilio.Text = "Domicilio";
+            radiobtn_Domicilio.UseVisualStyleBackColor = true;
+            // 
+            // radiobtn_Recoger
+            // 
+            radiobtn_Recoger.AutoSize = true;
+            radiobtn_Recoger.Location = new Point(809, 415);
+            radiobtn_Recoger.Name = "radiobtn_Recoger";
+            radiobtn_Recoger.Size = new Size(78, 19);
+            radiobtn_Recoger.TabIndex = 60;
+            radiobtn_Recoger.TabStop = true;
+            radiobtn_Recoger.Text = "Recogerlo";
+            radiobtn_Recoger.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(694, 386);
+            label12.Name = "label12";
+            label12.Size = new Size(158, 21);
+            label12.TabIndex = 61;
+            label12.Text = "Cambiar preferencia";
             // 
             // EditarPerfil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1073, 711);
+            Controls.Add(label12);
+            Controls.Add(radiobtn_Recoger);
+            Controls.Add(radiobtn_Domicilio);
+            Controls.Add(txtbox_Lugar);
             Controls.Add(checksubs);
             Controls.Add(checkpreferencia);
             Controls.Add(button1);
@@ -579,7 +607,6 @@
             Controls.Add(txt_apellido);
             Controls.Add(txt_nombre);
             Controls.Add(btn_Guardar);
-            Controls.Add(btn_cancelar);
             Controls.Add(combox_eliminFavorit);
             Controls.Add(label10);
             Controls.Add(combox_FavoritoDirec);
@@ -589,7 +616,6 @@
             Controls.Add(panel5);
             Controls.Add(label5);
             Controls.Add(label1);
-            Controls.Add(combox_TipoDirec);
             Controls.Add(label8);
             Controls.Add(label6);
             Controls.Add(label4);
@@ -637,7 +663,6 @@
         public PictureBox pictureBox1;
         private Label label11;
         private Panel panel3;
-        private ComboBox combox_TipoDirec;
         private Label label1;
         private Label label5;
         private Panel panel5;
@@ -646,7 +671,6 @@
         private Label label9;
         private ComboBox combox_FavoritoDirec;
         private ComboBox combox_eliminFavorit;
-        private Button btn_cancelar;
         private Button btn_Guardar;
         private TextBox txt_direccion;
         private TextBox txt_telefono;
@@ -660,5 +684,9 @@
         private CheckBox checkpreferencia;
         private PictureBox pictureBox6;
         private CheckBox checksubs;
+        private TextBox txtbox_Lugar;
+        private RadioButton radiobtn_Domicilio;
+        private RadioButton radiobtn_Recoger;
+        private Label label12;
     }
 }

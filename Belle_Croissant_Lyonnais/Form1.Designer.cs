@@ -86,6 +86,7 @@
             txtbox_contraseña.Name = "txtbox_contraseña";
             txtbox_contraseña.Size = new Size(221, 23);
             txtbox_contraseña.TabIndex = 4;
+            txtbox_contraseña.TextChanged += txtbox_contraseña_TextChanged;
             // 
             // txtbox_reestcontraseña
             // 
@@ -94,6 +95,7 @@
             txtbox_reestcontraseña.Name = "txtbox_reestcontraseña";
             txtbox_reestcontraseña.Size = new Size(221, 23);
             txtbox_reestcontraseña.TabIndex = 5;
+            txtbox_reestcontraseña.TextChanged += txtbox_reestcontraseña_TextChanged;
             // 
             // label4
             // 
@@ -138,6 +140,7 @@
             btn_cancelar.TabIndex = 9;
             btn_cancelar.Text = "Cancelar";
             btn_cancelar.UseVisualStyleBackColor = false;
+            btn_cancelar.Click += btn_cancelar_Click;
             // 
             // label2
             // 

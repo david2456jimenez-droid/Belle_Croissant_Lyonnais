@@ -40,6 +40,7 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            btn_cerrar = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -47,6 +48,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ButtonHighlight;
+            panel1.Controls.Add(btn_cerrar);
             panel1.Controls.Add(link_registrarse);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(btn_ingresar);
@@ -169,6 +171,16 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
+            // btn_cerrar
+            // 
+            btn_cerrar.Location = new Point(337, 2);
+            btn_cerrar.Name = "btn_cerrar";
+            btn_cerrar.Size = new Size(60, 21);
+            btn_cerrar.TabIndex = 11;
+            btn_cerrar.Text = "Cerrar";
+            btn_cerrar.UseVisualStyleBackColor = true;
+            btn_cerrar.Click += btn_cerrar_Click;
+            // 
             // Inicio_de_Sesion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -197,5 +209,6 @@
         private LinkLabel link_registrarse;
         private Label label4;
         private Button btn_ingresar;
+        private Button btn_cerrar;
     }
 }
