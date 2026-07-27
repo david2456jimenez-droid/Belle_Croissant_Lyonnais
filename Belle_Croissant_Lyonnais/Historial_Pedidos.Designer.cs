@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Historial_Pedidos));
             panel2 = new Panel();
-            pictureBox6 = new PictureBox();
             lbl_UsuarioPerfil = new Label();
             Foto_perfil = new PictureBox();
             panel1 = new Panel();
@@ -49,7 +48,6 @@
             label2 = new Label();
             dataGridView1 = new DataGridView();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Foto_perfil).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -62,22 +60,12 @@
             // panel2
             // 
             panel2.BackColor = Color.PaleTurquoise;
-            panel2.Controls.Add(pictureBox6);
             panel2.Controls.Add(lbl_UsuarioPerfil);
             panel2.Controls.Add(Foto_perfil);
             panel2.Location = new Point(300, 8);
             panel2.Name = "panel2";
             panel2.Size = new Size(779, 187);
             panel2.TabIndex = 17;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(116, 56);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(30, 30);
-            pictureBox6.TabIndex = 57;
-            pictureBox6.TabStop = false;
             // 
             // lbl_UsuarioPerfil
             // 
@@ -187,6 +175,7 @@
             linkEditar.TabIndex = 11;
             linkEditar.TabStop = true;
             linkEditar.Text = "Editar perfil";
+            linkEditar.LinkClicked += linkEditar_LinkClicked;
             // 
             // pictureBox2
             // 
@@ -281,9 +270,9 @@
             Controls.Add(panel1);
             Name = "Historial_Pedidos";
             Text = "Historial_Pedidos";
+            Load += Historial_Pedidos_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)Foto_perfil).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -299,7 +288,6 @@
         #endregion
 
         private Panel panel2;
-        private PictureBox pictureBox6;
         private Label lbl_UsuarioPerfil;
         private PictureBox Foto_perfil;
         private Panel panel1;

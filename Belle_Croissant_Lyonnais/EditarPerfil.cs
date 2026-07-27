@@ -249,10 +249,17 @@ namespace Belle_Croissant_Lyonnais
 
         private void txtbox_Lugar_TextChanged(object sender, EventArgs e)
         {
-            if(txtbox_Lugar.Text != "")
+            if (txtbox_Lugar.Text != "")
             {
                 txt_direccion.Enabled = true;
             }
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Historial_Pedidos historial = new Historial_Pedidos(usuario);
+            historial.Show();
+            this.Hide();
         }
     }
 }

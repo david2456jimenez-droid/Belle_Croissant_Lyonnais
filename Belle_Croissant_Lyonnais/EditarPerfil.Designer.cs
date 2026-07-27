@@ -241,6 +241,7 @@
             linkLabel3.TabIndex = 15;
             linkLabel3.TabStop = true;
             linkLabel3.Text = "Historial de pedidos";
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
             // pictureBox4
             // 

@@ -27,6 +27,24 @@ namespace Belle_Croissant_Lyonnais
         private void linkInfo_usuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Perfil_Usuario perfil = new Perfil_Usuario(usuario);
+            perfil.Show();
+            this.Hide();
+        }
+
+        private void linkEditar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            EditarPerfil editar = new EditarPerfil(usuario);
+            editar.Show();
+            this.Hide();
+        }
+
+        private void Historial_Pedidos_Load(object sender, EventArgs e)
+        {
+            lbl_UsuarioPerfil.Text = usuario.Nombre + " " + usuario.Apellido;
+            if (!string.IsNullOrEmpty(usuario.Foto_Perfil))
+            {
+                Foto_perfil.Image = Image.FromFile(usuario.Foto_Perfil);
+            }
         }
     }
 }
